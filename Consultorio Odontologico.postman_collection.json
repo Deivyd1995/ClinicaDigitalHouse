@@ -1,0 +1,476 @@
+{
+	"info": {
+		"_postman_id": "f7a22eda-1d1b-4506-8bb2-9a7ea470ce92",
+		"name": "Consultorio Odontologico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Odontologos",
+			"item": [
+				{
+					"name": "CreateOdontologo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroMatricula\": \"000047\",\r\n    \"name\": \"Jahdai\",\r\n    \"lastName\": \"Reyes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/dentist/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dentist/id/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"id",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dentist/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPorID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dentist/delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"numeroMatricula\": 64,\r\n    \"name\": \"Salo\",\r\n    \"lastName\": \"Morales\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/dentist/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarOdontologoPorNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dentist/name/Alejandro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dentist",
+								"name",
+								"Alejandro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "CreatePaciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dante\",\r\n    \"lastName\": \"Tapete\",\r\n    \"dni\": 33547848,\r\n    \"admissionDate\": \"2022-03-19\",\r\n    \"address\":{\r\n        \"street\": \"Calle Falsa\",\r\n        \"number\": 123,\r\n        \"location\": \"Mar del plata\",\r\n        \"province\": \"Bs.As\"\r\n    }     \r\n        \r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/patient/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"patient",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPaciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\": \"Marcelo\",\r\n    \"lastName\": \"Gallardo\",\r\n    \"dni\": 25413772,\r\n    \"admissionDate\": \"2022-03-20\",\r\n    \"address\":{\r\n        \"id\": 2,\r\n        \"street\": \"Carapachai\",\r\n        \"number\": 272,\r\n        \"location\": \"San Isidro\",\r\n        \"province\": \"Bs.As\"\r\n    }     \r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/patient/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"patient",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPacientePorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/patient/id/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"patient",
+								"id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarPacientePorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/patient/delete/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"patient",
+								"delete",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosLosPacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/patient/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"patient",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Turnos",
+			"item": [
+				{
+					"name": "CreateTurnos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"patient\":{\r\n        \"id\": 3,\r\n    \"name\": \"Marcelo\",\r\n    \"lastName\": \"Payaso\",\r\n    \"dni\": 33547848,\r\n    \"admissionDate\": \"2022-03-19\",\r\n    \"address\": {\r\n        \"id\": 3,\r\n        \"street\": \"Calle Falsa\",\r\n        \"number\": 123,\r\n        \"location\": \"Mar del plata\",\r\n        \"province\": \"Bs.As\"\r\n    }\r\n    },\r\n    \"dentist\":{\r\n            \"id\": 1,\r\n            \"numeroMatricula\": 63,\r\n            \"name\": \"Marcos\",\r\n            \"lastName\": \"Duran\"\r\n    },\r\n    \"dateTurn\": \"2022-03-24\" ,\r\n    \"time\":\"22:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/turn/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/turn/id/88",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"id",
+								"88"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosLosTurnosDelPaciente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/turn/patient/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"patient",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarTurno",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8,\r\n    \"patient\": {\r\n        \"id\": 3,\r\n        \"name\": \"Marcelo\",\r\n        \"lastName\": \"Payaso\",\r\n        \"dni\": 33547848,\r\n        \"admissionDate\": \"2022-03-19\",\r\n        \"address\": {\r\n            \"id\": 3,\r\n            \"street\": \"Calle Falsa\",\r\n            \"number\": 123,\r\n            \"location\": \"Mar del plata\",\r\n            \"province\": \"Bs.As\"\r\n        }\r\n    },\r\n    \"dentist\": {\r\n        \"id\": 1,\r\n    \"numeroMatricula\": 17,\r\n    \"name\": \"Rodrigo\",\r\n    \"lastName\": \"Ughelli\"\r\n    },\r\n    \"dateTurn\": \"2022-04-24\",\r\n    \"time\": \"17:50:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/turn/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearTurnoSoloConID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient\":{\"id\":3},\r\n    \"dentist\":{\"id\":1},\r\n    \"dateTurn\": \"2022-04-12\",\r\n    \"time\":\"14:45:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/turn/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerTodosLosTurnos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/turn/viewAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"turn",
+								"viewAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarTurnoPorID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginApp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "charley@digitalhouse.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
