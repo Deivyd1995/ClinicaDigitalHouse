@@ -50,5 +50,12 @@ class PatientServiceTest {
         assertEquals(true, patientDto.getName() != iPatientService.findById(1l).getName());
     }
 
+    @Test
+    public void testDeleteById() throws ResourceNotFoundException {
+        iPatientService.delete(1l);
+        iPatientService.findAll();
+        assertTrue(iPatientService.findAll().size() <1);
+    }
+
 
 }
